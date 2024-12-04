@@ -1,0 +1,12 @@
+dagster
+dagit
+dagster-graphql
+sqlalchemy
+pandas
+pyyaml
+psycopg2-binary
+dagster-postgres
+kafka-python
+confluent_kafka
+kafka-python-ng
+six
