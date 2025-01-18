@@ -1,0 +1,4 @@
+Host ec2-instance
+  HostName <EC2_PUBLIC_IP>
+  User ubuntu
+  IdentityFile C:\Users\<Tên người dùng>\.ssh\your-key.pem
