@@ -10,3 +10,6 @@ kafka-python
 confluent_kafka
 kafka-python-ng
 six
+dagster
+dagster-aws
+boto3
