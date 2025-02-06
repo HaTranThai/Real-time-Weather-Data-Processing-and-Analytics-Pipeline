@@ -5,7 +5,7 @@ from dagster_aws.redshift import RedshiftClientResource
 from dagster_aws.s3.sensor import get_s3_keys
 
 AWS_S3_BUCKET = os.getenv("AWS_S3_BUCKET", "weather-data-hatran")
-AWS_S3_OBJECT_PREFIX = os.getenv("AWS_S3_OBJECT_PREFIX", "output-data/Current_data/")
+AWS_S3_OBJECT_PREFIX = os.getenv("AWS_S3_OBJECT_PREFIX_Pollution", "output-data/Air_pollution_data/")
 
 # Định nghĩa tài nguyên Redshift
 @resource
@@ -70,7 +70,7 @@ def s3_to_redshift_job():
     copy_s3_to_redshift()
 
 @sensor(target=s3_to_redshift_job)
-def s3_backup_sensor(context):
+def S3_Pollution(context):
     latest_key = context.cursor or None
     unprocessed_object_keys = get_s3_keys(
         bucket=AWS_S3_BUCKET, prefix=AWS_S3_OBJECT_PREFIX, since_key=latest_key
@@ -104,5 +104,5 @@ defs = Definitions(
         "redshift": redshift_configured,
         "config": config_resource,
     },
-    sensors=[s3_backup_sensor],
+    sensors=[S3_Pollution],
 )
