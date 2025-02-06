@@ -23,10 +23,5 @@ git config --list
 
 echo "Cài đặt Git thành công!"
 
-sudo apt update
-
-sudo apt install subversion -y
-
-svn checkout https://github.com/HaTranThai/WeatherFlow-with-Dagster/trunk/dagster
 
 
