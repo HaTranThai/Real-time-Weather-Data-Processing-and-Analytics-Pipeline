@@ -1,0 +1,12 @@
+dbt_dagster_redshift:
+  outputs:
+    dev:
+      dbname: dev
+      host: ${REDSHIFT_HOST}
+      password: ${REDSHIFT_PASSWORD}
+      user: ${REDSHIFT_USER}
+      port: 5439
+      schema: public
+      threads: 4
+      type: redshift
+  target: dev

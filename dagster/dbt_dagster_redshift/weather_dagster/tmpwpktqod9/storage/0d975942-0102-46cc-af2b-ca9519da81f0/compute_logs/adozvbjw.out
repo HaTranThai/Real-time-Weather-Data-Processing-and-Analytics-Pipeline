@@ -1,0 +1,24 @@
+Running with dbt=1.9.2
+Registered adapter: postgres=1.9.0
+Found 6 models, 433 macros
+
+Concurrency: 4 threads (target='dev')
+
+1 of 6 START sql table model dbt_victoria_mola.aqi_data ........................ [RUN]
+2 of 6 START sql table model dbt_victoria_mola.weather_data .................... [RUN]
+1 of 6 OK created sql table model dbt_victoria_mola.aqi_data ................... [[32mSELECT 6[0m in 0.62s]
+2 of 6 OK created sql table model dbt_victoria_mola.weather_data ............... [[32mSELECT 4[0m in 0.63s]
+3 of 6 START sql table model dbt_victoria_mola.aqi_daily_avg ................... [RUN]
+4 of 6 START sql table model dbt_victoria_mola.bad_aqi_locations ............... [RUN]
+5 of 6 START sql table model dbt_victoria_mola.weather_aqi_relation ............ [RUN]
+6 of 6 START sql table model dbt_victoria_mola.weather_aqi_summary ............. [RUN]
+5 of 6 OK created sql table model dbt_victoria_mola.weather_aqi_relation ....... [[32mSELECT 24[0m in 0.53s]
+3 of 6 OK created sql table model dbt_victoria_mola.aqi_daily_avg .............. [[32mSELECT 2[0m in 0.57s]
+4 of 6 OK created sql table model dbt_victoria_mola.bad_aqi_locations .......... [[32mSELECT 12[0m in 0.57s]
+6 of 6 OK created sql table model dbt_victoria_mola.weather_aqi_summary ........ [[32mSELECT 24[0m in 0.60s]
+
+Finished running 6 table models in 0 hours 0 minutes and 1.86 seconds (1.86s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6

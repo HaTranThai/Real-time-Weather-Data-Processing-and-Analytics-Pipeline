@@ -7,8 +7,6 @@ RUN mkdir -p /app/dagster_home
 RUN apt-get update && apt-get install -y \
     curl \
     && apt-get clean
-    
-WORKDIR /app
 
 # COPY dagster/requirements.txt .
 # COPY dagster/docker/dagster.yaml /app/dagster_home/dagster.yaml
@@ -16,9 +14,11 @@ WORKDIR /app
 
 COPY requirements.txt .
 # COPY dagster/docker/dagster.yaml /app/dagster_home/dagster.yaml
-COPY ETL /app
-    
+COPY dbt_dagster_redshift /app/dbt_dagster_redshift
+
 RUN pip install --no-cache-dir -r requirements.txt
+
+WORKDIR /app/dbt_dagster_redshift/weather_dagster
 
 EXPOSE 3000
 

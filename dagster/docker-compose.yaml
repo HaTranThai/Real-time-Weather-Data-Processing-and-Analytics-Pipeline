@@ -5,7 +5,7 @@ services:
       dockerfile: docker/Dockerfile
     entrypoint: ["sh", "-c"]
     command: >
-      "dagster dev -h 0.0.0.0 -p 3000 -f repository.py"
+      "dagster dev -h 0.0.0.0 -p 3000"
     ports:
       - "3000:3000"
     env_file:                      
