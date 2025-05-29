@@ -60,5 +60,3 @@ Mọi đóng góp đều được hoan nghênh! Vui lòng tạo issue hoặc pul
 Dự án thuộc quyền sở hữu của [HaTranThai](https://github.com/HaTranThai).
 
 ---
-
-Nếu bạn có thêm thông tin chi tiết về các module, hướng dẫn cụ thể hơn hoặc quy trình CI/CD thì có thể bổ sung vào README này!
